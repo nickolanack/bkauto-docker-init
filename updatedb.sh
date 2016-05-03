@@ -23,7 +23,7 @@ for i in *.qb2014.sql.gz; do
     echo 'ALTER FUNCTION gettotal SQL SECURITY INVOKER;' | mysql qb2014
     echo 'ALTER FUNCTION hidematchedbankitem SQL SECURITY INVOKER;' | mysql qb2014
     echo 'ALTER FUNCTION vendorinvoicebanktrans SQL SECURITY INVOKER;' | mysql qb2014
-    
+
 
   done
 
@@ -55,3 +55,4 @@ for i in *_*.gz; do
   for j in *${name}*sql; do
         mysql "${name}" < "${j}"
   done
+done
