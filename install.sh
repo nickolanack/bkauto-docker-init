@@ -36,3 +36,5 @@ sed -i '8d' html/.htaccess
 echo 'Override production mode detection'
 sed -i 's/if (custom_/if(true||custom_/' html/index.php
 sed -i 's/if(custom_/if(true||custom_/' html/index.php
+
+chmod -R 777 html
