@@ -19,7 +19,6 @@ echo "\$db['default']['database']='qb2014';" >> html/application/config/database
 echo "\$db['default']['password']='duke851';" >> html/application/config/database.php
 
 echo "\$active_record=TRUE;" >> html/application/config/database.php
-$active_record
 
 
 echo "\$config['encryption_key'] = 'FTPCLASS';" >> html/application/config/config.php
