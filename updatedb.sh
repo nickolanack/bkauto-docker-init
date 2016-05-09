@@ -25,6 +25,15 @@ for i in *.qb2014.sql.gz; do
     echo 'ALTER FUNCTION vendorinvoicebanktrans SQL SECURITY INVOKER;' | mysql qb2014
 
 
+
+
+    echo 'ALTER TABLE `save_memorize_data` ADD `itemmarkuppercentage` VARCHAR( 10 ) NULL DEFAULT NULL;' | mysql qb2014
+    echo 'ALTER TABLE `vendor_tbl` ADD `itemmarkuppercentage` VARCHAR( 10 ) NULL DEFAULT NULL;' | mysql qb2014
+    echo 'ALTER TABLE `vendor_items` ADD `itemmarkuppercentage` VARCHAR( 10 ) NULL DEFAULT NULL;' | mysql qb2014
+    echo 'ALTER TABLE `bank_feed` ADD `itemmarkuppercentage` VARCHAR( 10 ) NULL DEFAULT NULL;' | mysql qb2014
+
+
+
   done
 
 done
