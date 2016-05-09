@@ -52,7 +52,11 @@ for i in *_*.gz; do
   echo "grant all on ${name}.* to ${name}@'localhost';"
   echo "grant all on ${name}.* to ${name}@'localhost';" | mysql
 
+
+  echo "grant all on ${name}.* to ${name}@'localhost';" | mysql
+
   for j in *${name}*sql; do
         mysql "${name}" < "${j}"
+        echo 'DELETE FROM quickbooks_log' | mysql $name
   done
 done
