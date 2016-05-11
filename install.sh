@@ -25,7 +25,7 @@ echo "\$config['encryption_key'] = 'FTPCLASS';" >> html/application/config/confi
 echo "\$config['cookie_secure'] = FALSE;" >> html/application/config/config.php
 echo "\$config['base_url'] = 'http://'.\$_SERVER['SERVER_NAME'].':'.\$_SERVER['SERVER_PORT'];" >> html/application/config/config.php
 
-cp util/settings html/
+cp -R util/settings html/
 
 echo 'Remove apache redirect to https directive'
 cp html/.htaccess html/htaccess.bak
