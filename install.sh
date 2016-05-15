@@ -1,3 +1,4 @@
+
 rm html/* -rf
 if [ -d 'application/application' ]; then
    echo 'Fetch codeigniter repository'
@@ -38,3 +39,11 @@ sed -i 's/if (custom_/if(true||custom_/' html/index.php
 sed -i 's/if(custom_/if(true||custom_/' html/index.php
 
 chmod -R 777 html
+
+
+cd /var/www/html
+
+
+wget https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.zip
+unzip phpMyAdmin-4.6.1-english.zip 
+mv phpMyAdmin-4.6.1-english pma
