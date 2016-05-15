@@ -1,7 +1,7 @@
 
 rm html/* -rf
 if [ -d 'application/application' ]; then
-   echo 'Fetch codeigniter repository'
+   echo 'Fetch codeigniter repository -b 2.2-stable'
    rm codeigniter -rf
    mkdir tmp
    git clone -q -b 2.2-stable https://github.com/bcit-ci/CodeIgniter.git codeigniter
@@ -28,7 +28,7 @@ echo "\$config['base_url'] = 'http://'.\$_SERVER['SERVER_NAME'].':'.\$_SERVER['S
 
 cp -R util/settings html/
 
-echo 'Remove apache redirect to https directive'
+echo 'Remove apache redirect to https directives'
 cp html/.htaccess html/htaccess.bak
 sed -i '8d' html/.htaccess
 sed -i '8d' html/.htaccess
@@ -38,12 +38,13 @@ echo 'Override production mode detection'
 sed -i 's/if (custom_/if(true||custom_/' html/index.php
 sed -i 's/if(custom_/if(true||custom_/' html/index.php
 
+
 chmod -R 777 html
 
 
 cd /var/www/html
 
-
+echo 'Install phpmyadmin'
 wget -q https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.zip
 unzip -q phpMyAdmin-4.6.1-english.zip 
 mv phpMyAdmin-4.6.1-english pma
