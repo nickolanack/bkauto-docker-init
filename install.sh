@@ -6,7 +6,7 @@ if [ -d 'application/application' ]; then
    mkdir tmp
    git clone -q -b 2.2-stable https://github.com/bcit-ci/CodeIgniter.git codeigniter
    mv -f codeigniter/* tmp/
-   rsync -rv application/ tmp/
+   rsync -rvq application/ tmp/
    mv tmp application/html
 fi
 echo 'Move application to document root'
@@ -44,6 +44,6 @@ chmod -R 777 html
 cd /var/www/html
 
 
-wget https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.zip
+wget –quiet https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.zip
 unzip -q phpMyAdmin-4.6.1-english.zip 
 mv phpMyAdmin-4.6.1-english pma
