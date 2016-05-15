@@ -4,7 +4,7 @@ if [ -d 'application/application' ]; then
    echo 'Fetch codeigniter repository'
    rm codeigniter -rf
    mkdir tmp
-   git clone -b 2.2-stable https://github.com/bcit-ci/CodeIgniter.git codeigniter
+   git clone -q -b 2.2-stable https://github.com/bcit-ci/CodeIgniter.git codeigniter
    mv -f codeigniter/* tmp/
    rsync -rv application/ tmp/
    mv tmp application/html
