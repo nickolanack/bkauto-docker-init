@@ -11,6 +11,8 @@ for i in *.qb2014.sql.gz; do
     echo 'create user testuser@"localhost" identified by "duke851";' | mysql
     echo 'grant all on qb2014.* to testuser@"localhost";' | mysql
 
+    echo 'grant create on *.* to testuser@"localhost";' | mysql
+
     #echo 'show databases;' | mysql
 
     mysql qb2014 < $j
