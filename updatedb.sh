@@ -12,6 +12,7 @@ for i in *.qb2014.sql.gz; do
     echo 'grant all on qb2014.* to testuser@"localhost";' | mysql
 
     echo 'grant create on *.* to testuser@"localhost";' | mysql
+    echo 'grant create user on *.* to testuser@"localhost";' | mysql
 
     #echo 'show databases;' | mysql
 
