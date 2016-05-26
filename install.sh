@@ -44,7 +44,12 @@ chmod -R 777 html
 
 cd /var/www/html
 
+echo 'Symlink Assets'
+
+ln -s /var/www/file_assets/ file_assets
+
 echo 'Install phpmyadmin'
 wget -q https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.zip
 unzip -q phpMyAdmin-4.6.1-english.zip 
 mv phpMyAdmin-4.6.1-english pma
+
