@@ -53,3 +53,9 @@ wget -q https://files.phpmyadmin.net/phpMyAdmin/4.6.1/phpMyAdmin-4.6.1-english.z
 unzip -q phpMyAdmin-4.6.1-english.zip 
 mv phpMyAdmin-4.6.1-english pma
 
+
+echo 'Install tail-f logger'
+git clone https://github.com/nickolanack/node-tail-f.git tail
+
+
+
