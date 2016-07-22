@@ -24,15 +24,15 @@ echo "\$active_record=TRUE;" >> html/application/config/database.php
 
 echo "\$config['encryption_key'] = 'FTPCLASS';" >> html/application/config/config.php
 echo "\$config['cookie_secure'] = FALSE;" >> html/application/config/config.php
-echo "\$config['base_url'] = 'http://'.\$_SERVER['SERVER_NAME'].':'.\$_SERVER['SERVER_PORT'];" >> html/application/config/config.php
+echo "\$config['base_url'] = 'https://'.\$_SERVER['SERVER_NAME'].':'.\$_SERVER['SERVER_PORT'];" >> html/application/config/config.php
 
 cp -R util/settings html/
 
-echo 'Remove apache redirect to https directives'
-cp html/.htaccess html/htaccess.bak
-sed -i '8d' html/.htaccess
-sed -i '8d' html/.htaccess
-sed -i '8d' html/.htaccess
+#echo 'Remove apache redirect to https directives'
+#cp html/.htaccess html/htaccess.bak
+#sed -i '8d' html/.htaccess
+#sed -i '8d' html/.htaccess
+#sed -i '8d' html/.htaccess
 
 echo 'Override production mode detection'
 sed -i 's/if (custom_/if(true||custom_/' html/index.php
