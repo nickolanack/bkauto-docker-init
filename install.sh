@@ -56,6 +56,4 @@ mv phpMyAdmin-4.6.1-english pma
 
 echo 'Install tail-f logger'
 git clone https://github.com/nickolanack/node-tail-f.git tail
-
-
-
+nodejs tail/tail.js >tail/taillog.txt 2>&1 &
